@@ -20,6 +20,15 @@ rbenv install 2.1.2
 
 **注意**：有些 Ruby 版本淘宝镜像上没有。
 
+## 升级方法
+
+进入 `rbenv-taobao-mirror` 插件所在的目录，拉取这个仓库里的最新代码：
+
+```
+$ cd ~/.rbenv/plugins/rbenv-taobao-mirror
+$ git pull
+```
+
 ## 卸载方法
 
 进入 `~/.rbenv/plugins/` 目录，把 `rbenv-taobao-mirror` 文件夹整个删除即可。
