@@ -15,8 +15,9 @@ change_to() {
     usage
   elif [ ! -f "$definition" ]; then
     local definition_buildin_path="${RBENV_ROOT}/plugins/ruby-build/share/ruby-build/${definition}"
+    # is definition file exists
     if [ -e "$definition_buildin_path" ]; then
-      sed -i '' 's!http://cache.ruby-lang.org/pub!https://ruby.taobao.org/mirrors!' $definition_buildin_path
+      perl -p -i -e 's!https://cache.ruby-lang.org/pub!https://ruby.taobao.org/mirrors!' $definition_buildin_path
     else
       echo "ruby-build: definition not found: ${definition_buildin_path}" >&2
       exit 2
@@ -27,6 +28,6 @@ change_to() {
 change_back() {
   if [ ! -f "$definition" ]; then
     local definition_buildin_path="${RBENV_ROOT}/plugins/ruby-build/share/ruby-build/${ARGUMENTS[0]}"
-    sed -i '' 's!https://ruby.taobao.org/mirrors!http://cache.ruby-lang.org/pub!' $definition_buildin_path
+    perl -p -i -e 's!https://ruby.taobao.org/mirrors!https://cache.ruby-lang.org/pub!' $definition_buildin_path
   fi
 }
