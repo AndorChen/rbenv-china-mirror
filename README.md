@@ -1,4 +1,4 @@
-# rbenv-taobao-mirror
+# rbenv-china-mirror
 
 这是一个 [rbenv](https://github.com/sstephenson/rbenv) 插件，作用是使用 [Ruby China 的镜像](https://cache.ruby-china.org/)安装 Ruby。
 
