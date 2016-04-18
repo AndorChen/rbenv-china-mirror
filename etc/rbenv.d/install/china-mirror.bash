@@ -2,7 +2,7 @@ if declare -Ff before_install >/dev/null; then
   before_install change_to
   after_install change_back
 else
-  echo "rbenv: rbenv-taobao-mirror plugin requires ruby-build 20130129 or later" >&2
+  echo "rbenv: rbenv-china-mirror plugin requires ruby-build 20130129 or later" >&2
 fi
 
 change_to() {
@@ -15,9 +15,9 @@ change_to() {
     usage
   elif [ ! -f "$definition" ]; then
     local definition_buildin_path="${RBENV_ROOT}/plugins/ruby-build/share/ruby-build/${definition}"
-    # is definition file exists
+    # is definition file exists?
     if [ -e "$definition_buildin_path" ]; then
-      perl -p -i -e 's!https://cache.ruby-lang.org/pub!https://ruby.taobao.org/mirrors!' $definition_buildin_path
+      perl -p -i -e 's!cache.ruby-lang.org!cache.ruby-china.org!' $definition_buildin_path
     else
       echo "ruby-build: definition not found: ${definition_buildin_path}" >&2
       exit 2
@@ -28,6 +28,6 @@ change_to() {
 change_back() {
   if [ ! -f "$definition" ]; then
     local definition_buildin_path="${RBENV_ROOT}/plugins/ruby-build/share/ruby-build/${ARGUMENTS[0]}"
-    perl -p -i -e 's!https://ruby.taobao.org/mirrors!https://cache.ruby-lang.org/pub!' $definition_buildin_path
+    perl -p -i -e 's!cache.ruby-china.org!cache.ruby-lang.org!' $definition_buildin_path
   fi
 }
