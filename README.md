@@ -4,7 +4,7 @@
 
 ## 安装方法
 
-在命令中执行以下命令：
+在命令行中执行下述命令：
 
 ```sh
 $ git clone https://github.com/andorchen/rbenv-china-mirror.git ~/.rbenv/plugins/rbenv-china-mirror
