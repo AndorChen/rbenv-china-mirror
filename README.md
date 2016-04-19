@@ -7,7 +7,7 @@
 在命令中执行以下命令：
 
 ```sh
-$ git clone https://github.com/andorchen/rbenv-china-mirror.git ~/.rbenv/plugins/rbenv-china-mirror
+$ git clone https://github.com/AndorChen/rbenv-china-mirror.git ~/.rbenv/plugins/rbenv-china-mirror
 ```
 
 ## 使用方法
