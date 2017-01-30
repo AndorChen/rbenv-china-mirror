@@ -15,7 +15,7 @@ $ git clone https://github.com/andorchen/rbenv-china-mirror.git ~/.rbenv/plugins
 像往常一样安装 Ruby 即可，无需额外设置。
 
 ```sh
-$ rbenv install 2.3.0
+$ rbenv install 2.4.0
 ```
 
 ## 升级方法
@@ -39,6 +39,6 @@ $ git pull
 
 [Andor](http://about.ac)
 
-## 授权协议
+## 许可证
 
 MIT
