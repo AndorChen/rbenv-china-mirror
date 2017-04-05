@@ -17,7 +17,7 @@ change_to() {
   elif [ ! -f "$DEFINITION_PATH" ]; then
 
     local homebrew_ruby_build_dir="$(brew --prefix ruby-build 2>/dev/null || true)"
-    # ruby-build iinstalled by homebrew
+    # ruby-build installed by homebrew
     if [ -d "$homebrew_ruby_build_dir" ]; then
       RUBY_BUILD_INSTALL_PREFIX=$homebrew_ruby_build_dir
     # ruby-build installed manually
