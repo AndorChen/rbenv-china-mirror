@@ -16,6 +16,15 @@ change_to() {
     usage 1 >&2
   elif [ ! -f "$DEFINITION_PATH" ]; then
 
+    local homebrew_ruby_build_dir="$(brew --prefix ruby-build 2>/dev/null || true)"
+    # ruby-build iinstalled by homebrew
+    if [ -d "$homebrew_ruby_build_dir" ]; then
+      RUBY_BUILD_INSTALL_PREFIX=$homebrew_ruby_build_dir
+    # ruby-build installed manually
+    else
+      RUBY_BUILD_INSTALL_PREFIX="$(rbenv root)/plugins/ruby-build"
+    fi
+
     OLDIFS="$IFS"
     IFS=: RUBY_BUILD_DEFINITIONS=($RUBY_BUILD_DEFINITIONS ${RUBY_BUILD_ROOT:-$RUBY_BUILD_INSTALL_PREFIX}/share/ruby-build)
 
