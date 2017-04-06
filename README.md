@@ -7,7 +7,7 @@
 在命令行中执行下述命令：
 
 ```sh
-$ git clone https://github.com/andorchen/rbenv-china-mirror.git ~/.rbenv/plugins/rbenv-china-mirror
+$ git clone https://github.com/andorchen/rbenv-china-mirror.git "$(rbenv root)"/plugins/rbenv-china-mirror
 ```
 
 ## 使用方法
@@ -15,7 +15,7 @@ $ git clone https://github.com/andorchen/rbenv-china-mirror.git ~/.rbenv/plugins
 像往常一样安装 Ruby 即可，无需额外设置。
 
 ```sh
-$ rbenv install 2.4.0
+$ rbenv install 2.4.1
 ```
 
 ## 升级方法
