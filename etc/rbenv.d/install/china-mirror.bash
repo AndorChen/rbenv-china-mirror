@@ -31,7 +31,7 @@ change_to() {
     for DEFINITION_DIR in "${RUBY_BUILD_DEFINITIONS[@]}"; do
       if [ -f "${DEFINITION_DIR}/${DEFINITION_PATH}" ]; then
         DEFINITION_PATH="${DEFINITION_DIR}/${DEFINITION_PATH}"
-        perl -p -i -e 's!cache.ruby-lang.org!cache.ruby-china.org!' ${DEFINITION_PATH}
+        perl -p -i -e 's!cache.ruby-lang.org!cache.ruby-china.com!' ${DEFINITION_PATH}
         break
       fi
     done
@@ -47,6 +47,6 @@ change_to() {
 
 change_back() {
   if [ ! -f "${ARGUMENTS[0]}" ]; then
-    perl -p -i -e 's!cache.ruby-china.org!cache.ruby-lang.org!' ${DEFINITION_PATH}
+    perl -p -i -e 's!cache.ruby-china.com!cache.ruby-lang.org!' ${DEFINITION_PATH}
   fi
 }
