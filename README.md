@@ -1,6 +1,6 @@
 # rbenv-china-mirror
 
-这是一个 [rbenv](https://github.com/rbenv/rbenv) 插件，作用是使用 [Ruby China 的镜像](https://cache.ruby-china.org/)安装 Ruby。
+这是一个 [rbenv](https://github.com/rbenv/rbenv) 插件，作用是使用 [Ruby China 的镜像](https://cache.ruby-china.com/)安装 Ruby。
 
 ## 安装方法
 
